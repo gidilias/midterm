@@ -1,0 +1,22 @@
+# Core (real GPU run against DeepSeek-R1-Distill-Qwen-1.5B)
+torch>=2.1
+transformers>=4.44
+accelerate>=0.30
+sentencepiece>=0.1.99
+
+# Evaluation / analysis
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+pyyaml>=6.0
+
+# Optional: better mutation (synonyms). Falls back gracefully if absent.
+nltk>=3.8
+
+# Baseline attack tool used in Assignment 2 (install separately if re-running garak)
+# garak==0.17.0
+#
+# NOTE: The dry-run / mock pipeline (scripts/02_run_autodan.py --backend mock)
+# needs ONLY: numpy, pandas, scipy, pyyaml, matplotlib.
+# torch/transformers are imported lazily and are required only for --backend hf.
